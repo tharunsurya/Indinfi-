@@ -1,0 +1,193 @@
+/* General body settings */
+html,
+body {
+    height: 100%;
+    /* Make sure body and html take up the full height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Stack content vertically */
+}
+
+/* Navbar - Make it sticky */
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:9999;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Optional shadow for better visibility */
+}
+.navbar.scrolled {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Optional shadow for better visibility */
+}
+
+/* Hero Section */
+.hero-section {
+    height: auto;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    margin-top: 0;
+    /* Ensure no margin on top of the hero section */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    /* Push footer to the bottom */
+}
+
+/* Make sure footer sticks to the bottom */
+footer {
+    position: relative;
+    margin-top: auto;
+    /* Ensures it pushes the footer down */
+}
+
+/* Testimonial Carousel speed */
+
+
+/* Hide carousel buttons in the testimonial section */
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+/* Optional: Remove the padding/spacing to avoid any overlap or space allocation for hidden elements */
+.testimonials .carousel-inner {
+    padding-right: 0 !important;
+    /* Remove right padding */
+    padding-left: 0 !important;
+    /* Remove left padding */
+    transition: transform 0.3s ease-in-out !important;
+}
+
+/* Media Queries for Device Responsiveness */
+
+/* For Mobile (Portrait Mode) */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 0 5%;
+        margin-top: 0;
+        /* Remove any gap */
+    }
+
+    .hero-title {
+        font-size: 8vw;
+    }
+
+    .hero-subtitle {
+        font-size: 4vw;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    #WhoWeAre .col-md-4 {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .search-input {
+        max-width: 16rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.8rem;
+    }
+
+    .testimonial-box {
+        padding: 10px;
+    }
+
+    .testimonial-box p {
+        font-size: 1rem;
+    }
+
+    .testimonial-box h5 {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 1rem 0;
+        /* Ensure proper footer padding */
+    }
+}
+
+/* For Larger Screens (Desktops and Large Devices) */
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 0 10%;
+    }
+
+    .search-input {
+        max-width: 25rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+
+    .testimonials h2 {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-box {
+        padding: 20px;
+    }
+}
+
+/* For Medium Screens (Small Tablets and Large Phones) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-title {
+        font-size: 6vw;
+    }
+
+    .hero-subtitle {
+        font-size: 3.5vw;
+    }
+
+    .testimonial-box {
+        padding: 15px;
+    }
+
+    .testimonials h2 {
+        font-size: 2.2rem;
+    }
+}
