@@ -1,0 +1,330 @@
+/* Hero Section */
+body {
+    padding-top: 65px;
+    /* Adjust the value based on the height of your navbar */
+}
+.hero-section {
+    height: auto;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.hero-title {
+    font-size: 5vw;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 2.5vw;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.btn {
+    background-color: #8a85a0b6;
+    border-color: #007BFF;
+}
+
+.btn:hover {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.hero-image {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.hero-image.show-image {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.search-input {
+    max-width: 25rem;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 8px 15px;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+.search-btn {
+    border-radius: 50px;
+    padding: 8px 15px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+/* "Who We Are" Section */
+#WhoWeAre {
+    background: linear-gradient(45deg, #2c3e50, #4ca1af);
+    padding: 5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title-custom {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #ff6347;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease-in-out;
+}
+
+.title-custom:hover {
+    color: #ff7f50;
+}
+
+.icon-custom {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #ff7f50, #ff6347);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-custom:hover {
+    transform: scale(1.1);
+    color: #ff6347;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 4rem 0;
+}
+
+.testimonial-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-icon {
+    color: #FFD700;
+}
+
+.testimonial-box p {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-box h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+
+/* Media Queries for Device Responsiveness */
+
+/* For Tablets (Portrait Mode) */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 0 5%;
+    }
+
+    .hero-title {
+        font-size: 6vw;
+    }
+
+    .hero-subtitle {
+        font-size: 3vw;
+    }
+
+    .hero-image {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+
+    .search-input {
+        max-width: 20rem;
+    }
+
+    /* Navbar for tablets */
+    .navbar-nav {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* "Who We Are" Section */
+    #WhoWeAre .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #WhoWeAre .col-md-4 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Testimonials Section */
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-box {
+        padding: 15px;
+    }
+}
+
+/* For Mobile (Portrait Mode) */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 0 5%;
+    }
+
+    .hero-title {
+        font-size: 8vw;
+    }
+
+    .hero-subtitle {
+        font-size: 4vw;
+    }
+
+    /* Navbar */
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    /* "Who We Are" Section */
+    #WhoWeAre .col-md-4 {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* Adjust for the carousel */
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .search-input {
+        max-width: 16rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+
+    /* Testimonials Section */
+    .testimonials h2 {
+        font-size: 1.8rem;
+    }
+
+    .testimonial-box {
+        padding: 10px;
+    }
+
+    .testimonial-box p {
+        font-size: 1rem;
+    }
+
+    .testimonial-box h5 {
+        font-size: 1rem;
+    }
+}
+
+/* For Larger Screens (Desktops and Large Devices) */
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 0 10%;
+    }
+
+    .search-input {
+        max-width: 25rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+
+    .testimonials h2 {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-box {
+        padding: 20px;
+    }
+}
+
+/* For Medium Screens (Small Tablets and Large Phones) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-title {
+        font-size: 6vw;
+    }
+
+    .hero-subtitle {
+        font-size: 3.5vw;
+    }
+
+    .testimonial-box {
+        padding: 15px;
+    }
+
+    .testimonials h2 {
+        font-size: 2.2rem;
+    }
+}
